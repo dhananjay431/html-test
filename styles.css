@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.flex-container {
+  display: flex;
+
+  /* background-color: red; */
+  height: 100%;
+  /*    padding: 15px;
+  gap: 5px; */
+}
+
+/*   .flex-container > div{
+  background: #ffecb3;
+  border: 3px solid #ffcc80;
+  border-radius: 5px;
+  padding: 8px;
+} */
+
+.item1 {
+  /* flex:0 1 auto; */
+  flex-grow: 0;
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(
+      0deg,
+      rgba(71, 75, 255, 0.5) 0%,
+      rgba(188, 72, 255, 0.5) 100%
+    ),
+    url('https://abh.ai/random/250/700') no-repeat center center / cover;
+}
+#item1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(
+      45deg,
+      #0000 calc(25% / 3),
+      #cfcfec 0 calc(50% / 3),
+      #0000 0 calc(250% / 3),
+      #cfcfec 0 calc(275% / 3),
+      #0000 0
+    ),
+    linear-gradient(
+      45deg,
+      #cfcfec calc(25% / 3),
+      #0000 0 calc(50% / 3),
+      #cfcfec 0 25%,
+      #0000 0 75%,
+      #cfcfec 0 calc(250% / 3),
+      #0000 0 calc(275% / 3),
+      #cfcfec 0
+    ),
+    linear-gradient(
+      -45deg,
+      #0000 calc(25% / 3),
+      #cfcfec 0 calc(50% / 3),
+      #0000 0 calc(250% / 3),
+      #cfcfec 0 calc(275% / 3),
+      #0000 0
+    ),
+    linear-gradient(
+        -45deg,
+        #cfcfec calc(25% / 3),
+        #0000 0 calc(50% / 3),
+        #cfcfec 0 25%,
+        #0000 0 75%,
+        #cfcfec 0 calc(250% / 3),
+        #0000 0 calc(275% / 3),
+        #cfcfec 0
+      )
+      #eff6f9;
+  background-size: 64px 64px;
+  background-position: 0 0, 32px 32px;
+
+  opacity: 0.1;
+  /* background-color: #eff6f9; */
+}
+
+.item2 {
+  /* flex:1 1 auto; */
+  flex-grow: 1;
+  position: relative;
+  z-index: 9999;
+}
+
+.float {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  /* z-index: 9999; */
+  animation-name: ani-float;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ani-float {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
